@@ -38,8 +38,11 @@ services:
     env_file: ./grafana/grafana.conf
     container_name: grafana
     volumes:
-      - ${PWD}/grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
-      - ${PWD}/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - type: volume
+        source: grafana_data
+        target: /prometheus
+      - ./grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
     ports:
       - 3000:3000
     networks:
