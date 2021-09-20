@@ -133,3 +133,18 @@ services:
     restart: always
     volumes:
       - ./data:/data
+
+  validator-exporter:
+    profiles: ["valexporter"]
+    image: xiphiar/validator-exporter:latest
+    container_name: validator-exporter
+    environment:
+      LCD_URL: "${LCD_URL}"
+      RPC_URL: "${RPC_URL}"
+      OPER_ADDR: "${OPER_ADDR}"
+      PREFIX: "${PREFIX}"
+    networks:
+      - cosmos-monitoring
+    ports:
+      - 26661:26661
+    restart: always
