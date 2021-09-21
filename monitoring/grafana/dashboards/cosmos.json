@@ -953,7 +953,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_height{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_height{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "format": "time_series",
             "hide": false,
             "instant": true,
@@ -1039,7 +1039,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "avg_over_time(tendermint_consensus_block_interval_seconds{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}[1m])",
+            "expr": "avg_over_time(tendermint_consensus_block_interval_seconds{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}[1m])",
             "format": "time_series",
             "instant": false,
             "interval": "",
@@ -1124,7 +1124,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_validators{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_validators{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -1205,7 +1205,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}/1000000",
+            "expr": "tendermint_consensus_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}/1000000",
             "refId": "A"
           }
         ],
@@ -1285,7 +1285,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_missing_validators{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_missing_validators{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -1365,7 +1365,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "((tendermint_consensus_byzantine_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"} + tendermint_consensus_missing_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}) / tendermint_consensus_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}) * 100",
+            "expr": "((tendermint_consensus_byzantine_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"} + tendermint_consensus_missing_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}) / tendermint_consensus_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}) * 100",
             "refId": "A"
           }
         ],
@@ -1445,7 +1445,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_byzantine_validators{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_byzantine_validators{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -1525,7 +1525,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_total_txs{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_total_txs{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -1605,7 +1605,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_rounds{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_rounds{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -1685,7 +1685,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_latest_block_height{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_latest_block_height{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -1765,7 +1765,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_num_txs{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_num_txs{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -1845,7 +1845,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_fast_syncing{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_fast_syncing{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -1930,7 +1930,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_byzantine_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_byzantine_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -2010,7 +2010,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_consensus_block_size_bytes{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_block_size_bytes{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -2069,7 +2069,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "tendermint_consensus_block_interval_seconds{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_block_interval_seconds{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -2190,7 +2190,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_p2p_peers{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_p2p_peers{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -2283,7 +2283,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_mempool_size{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_mempool_size{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -2363,7 +2363,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_mempool_tx_size_bytes_sum{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_mempool_tx_size_bytes_sum{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -2443,7 +2443,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "tendermint_mempool_recheck_times{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_mempool_recheck_times{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -2502,7 +2502,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "tendermint_consensus_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_validators_power{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -2589,7 +2589,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "tendermint_consensus_missing_validators{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmoshub\"}",
+            "expr": "tendermint_consensus_missing_validators{chain_id=\"$chain_id\",instance=\"$instance\",job=\"cosmos\"}",
             "refId": "A"
           }
         ],
@@ -2644,8 +2644,8 @@
         {
           "allValue": null,
           "current": {
-            "text": "cosmoshub-2",
-            "value": "cosmoshub-2"
+            "text": "cosmos-2",
+            "value": "cosmos-2"
           },
           "datasource": "Cosmos",
           "definition": "label_values(tendermint_consensus_height, chain_id)",
