@@ -40,7 +40,7 @@ services:
     volumes:
       - type: volume
         source: grafana_data
-        target: /prometheus
+        target: /var/lib/grafana
       - ./grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
       - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
     ports:
